@@ -11,16 +11,27 @@ rubric and it becomes yours.
 
 ## Install
 
-This is a Claude **skill** — a folder with a `SKILL.md` the agent loads.
+Paste this into Claude Code — it handles the rest:
 
-1. Copy this folder into your skills directory:
-   - **Claude Code:** `~/.claude/skills/leverage-filter/` (or your project's `.claude/skills/`).
-   - **Claude desktop / web:** add it via Settings → Customize → Skills (zip the folder, or package it as a `.skill` bundle).
-2. In a session where the skill is available, invoke it by intent — e.g.
-   *"check the leverage on this: &lt;paste work&gt;"* or *"rank these by leverage: &lt;list&gt;"*.
+```
+Install the leverage-filter skill: clone https://github.com/chzylee/leverage-filter
+into ~/.claude/skills/leverage-filter (so SKILL.md ends up at
+~/.claude/skills/leverage-filter/SKILL.md). Then confirm the skill is available.
+```
 
-It reads `rubric.yaml` and `examples/` from this folder, so keep them next to
-`SKILL.md`. No build step, no dependencies, nothing to configure.
+That's the whole install. It's a self-contained skill folder (`SKILL.md` +
+`rubric.yaml` + `examples/`) — no build step, no dependencies, nothing to
+configure. Swap in your project's `.claude/skills/` if you want it scoped to one
+repo instead of global.
+
+**Then use it** — just say what you want: *"check the leverage on this: &lt;paste
+work&gt;"* or *"rank these by leverage: &lt;list&gt;"*.
+
+<details><summary>Claude desktop / web (no Claude Code)</summary>
+
+Download the folder and add it via **Settings → Customize → Skills** (point it at
+the folder, or package it as a `.skill` bundle).
+</details>
 
 ## Why it exists
 
