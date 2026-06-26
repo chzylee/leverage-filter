@@ -1,0 +1,72 @@
+# leverage-filter rubric
+#
+# This is an OPINION of what makes work worth SHARING — and it is yours to edit.
+#
+# It scores VISIBILITY LEVERAGE: the payoff from making work part of your public
+# narrative. It does NOT judge whether the work is worth doing — that's the doing
+# axis (your manager / ts-pmo). A low score means "don't center your narrative
+# here," never "don't do it."
+#
+# Keep its nature: every criterion measures how work like this is RECEIVED when
+# shared (what draws the eye of people hiring and scaling), NOT how well it serves
+# your private goals. Refine wording, weights, and tests over time — see
+# refine.md — but stay on the visibility axis.
+
+rubric_version: v1
+nature: external          # measures world-reception, not personal-goal-fit
+authored_by: "Noah — a starting opinion, meant to be refined"
+
+# ── Gate 1: SUBSTANCE — is there something worth SEEING here? ────────────────
+# Score each 0–2. Sum < 4 → STOP (tier = Skip). Measures whether an audience would
+# find real value in work LIKE THIS — NOT whether it's useful to you. "It saves ME
+# time" is the doing axis, not this one. Score the world's interest in seeing it,
+# not your to-do list.
+gate_1_substance:
+  pain_density:
+    test: "How widely is the pain this addresses felt? Do others lose real time or reward to it?"
+    scale: "0 = mostly just your itch · 1 = some people feel it · 2 = a common, named pain in the field"
+  frequency:
+    test: "How broadly does this pattern recur across people's workflows?"
+    scale: "0 = one-off · 1 = recurs in some workflows · 2 = a pervasive pattern many people hit"
+  leverage:
+    test: "If solved AND shown, how much velocity does it give to something many people do?"
+    scale: "0 = personal convenience only · 1 = a niche would adopt · 2 = broadly adoptable"
+    note: "Gate-flipping dimension — when unsure, score DOWN. Only 2 with concrete
+           reason to believe many would adopt."
+
+# ── Gate 2: SIGNAL — is that latent value made LEGIBLE? ──────────────────────
+# Only scored if Substance passed. Count how many are SURFACED in the work as
+# described (0–4). Latent ≠ counted: a quality that exists but isn't shown (e.g.
+# a tradeoff you made but never articulated) does NOT count — it's the cheapest
+# lift, not a point.
+gate_2_signal:
+  frontier_tool_use:
+    test: "A currently-non-obvious use of AI — not a wrapper, not a chatbot demo."
+  self_starting:
+    test: "Visibly: you saw a problem and shipped, unprompted."
+  named_tradeoff:
+    test: "Names at least one intentional tradeoff with a provable/measured payoff."
+  future_state:
+    test: "Anticipates where AI is pushing the work; catches an early gotcha."
+
+# ── Sweet spot — boolean. Tips Borderline → Post; never rescues a Raise/Skip ──
+sweet_spot:
+  schlep_to_structure:
+    test: "Schlep automation, OR giving clean form to unstructured data/process. (yes/no)"
+    effect: "Tips a Borderline read to Post, and breaks within-tier ties in Rank.
+             Does NOT lift a Raise or a Skip — invisible work stays invisible."
+    why: "Highest-leverage category by construction: strong latent value and the
+          most legible surface for senior judgment and future-state — so once it's
+          already legible (Borderline+), it's worth shipping."
+
+# ── Presentation rule — applies when the verdict is Post ─────────────────────
+presentation:
+  show_dont_tell: "Prove the trait through what you DID. Delete self-describing
+                   adjectives. If the claim survives with every 'I'm senior /
+                   innovative' word removed, it passes."
+
+# ── Honesty clause ───────────────────────────────────────────────────────────
+honesty:
+  - "A low score is information, not a failure."
+  - "'Post it anyway, for fun, with a shifted, honest tone' is a valid verdict."
+  - "The filter informs; you decide. It does not track whether you followed it."
